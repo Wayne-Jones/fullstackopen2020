@@ -1,14 +1,12 @@
 note over browser:
-user adds a new note
-user hits submit button
+browser submits form input to new_note
 end note
 
 browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note
-server-->browser: HTTP 302 Status Code - Location: /notes
+server-->browser: HTTP 302 Found Status Code - Location /notes
 
 note over browser:
-browser submits form input to new_note
-browser redirects back to notes pages
+browser redirects to notes page
 end note
 
 browser->server: HTTP GET http://fullstack-exampleapp.herokuapp.com/notes

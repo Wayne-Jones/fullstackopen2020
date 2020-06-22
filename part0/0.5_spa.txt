@@ -1,0 +1,23 @@
+note over browser:
+user types the url and hits enter
+end note
+
+browser->server: HTTP GET fullstack-exampleapp.herokuapp.com/spa
+server-->browser: HTTP 200 OK: HTML-code
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css
+server-->browser: HTTP 200 OK: main.css
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js
+server-->browser: HTTP 200 OK: spa.js
+
+note over browser:
+browser executes javascript code that requests JSON data from server
+end note
+
+browser->server: HTTP GET https://fullstack-exampleapp.herokuapp.com/data.json
+server-->browser: HTTP 200 OK: data.json
+
+note over browser:
+browser executes the event handler and renders notes to display
+end note

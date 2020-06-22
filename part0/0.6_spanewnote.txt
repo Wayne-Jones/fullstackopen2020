@@ -1,0 +1,13 @@
+note over browser:
+user writes a new note and hits submit
+browser executes javascript to redraw notes
+browser sends request note as a json message
+end note
+
+browser->server: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note_spa
+server-->browser: HTTP 201 Created: json-message
+
+note over browser:
+browser executes javascript code and console logs response
+{"message":"note created"}
+end note
